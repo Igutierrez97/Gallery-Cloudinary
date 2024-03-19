@@ -12,7 +12,7 @@ export async function POST(request: Request, response: Response) {
         exp: Math.floor(Date.now() / 1000) + 60 * 60,
         email,
       },
-      'secret'
+      `${process.env.SECRET_kEY}`
     );
     const serializedToken = serialize('token', token, {
       httpOnly: true,

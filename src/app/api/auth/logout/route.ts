@@ -10,7 +10,7 @@ export async function GET(request: NextRequest, response: NextResponse) {
   }
 
   try {
-    verify(cookie.value, 'secret');
+    verify(cookie.value, `${process.env.SECRET_kEY}`);
     const serializedToken = serialize('token', '', {
       httpOnly: true,
       sameSite: 'strict',

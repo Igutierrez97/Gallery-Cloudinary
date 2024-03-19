@@ -3,11 +3,6 @@
 import { useState } from 'react';
 
 export const UploadFiles = () => {
-  const token = {
-    name: 'token',
-    value:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDY4OTM4MjAsImVtYWlsIjoiSm9zdWVAdWNpLmN1IiwiaWF0IjoxNzA2ODkwMjIwfQ.TQXEi7HnZc8h8yV51KT2m4s_pknwIkJLGwgp3Kf-2lU',
-  };
   const [file, setFile] = useState(null);
   const handleSubmit = async (e: any) => {
     e.preventDefault();
